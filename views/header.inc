@@ -25,7 +25,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">PHP Ajax Search</a>
+          <a class="brand" href="index.php">PHP &amp; AJAX Search</a>
         </div>
       </div>
     </div>

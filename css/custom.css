@@ -1,6 +1,7 @@
 body {
 	color: #313131;
 	font-family: "Droid Sans", sans-serif;
+        min-height: 101%;
 }
 
 h1, h2, h5{
@@ -62,6 +63,7 @@ hr {
 }
 
 .brand {
+        color: #BF3030!important;
 	font-size: 24px!important;	
 }
 

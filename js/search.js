@@ -29,9 +29,16 @@ $(document).ready(function(){
 						var output = '<ul class="searchresults">';
 						$.each(data, function(key, val){
 
+						/*phone number data in the locations database does not contain dashes or parenthesis, 
+						but phone numbers are easier to read with parens and dashes so we add them here. */ 
 						var phoneNum = val.phone_number;
 						var phone = "("+phoneNum.slice(0,3)+") "+phoneNum.slice(3,6)+"-"+phoneNum.slice(6);
-						
+
+						/* A regex checks the json file for matches, then output results. 
+						*  myExp looks for name, city, state and zip matches. 
+						*  matches are added to output, then output is set as the html content on the #update element.
+						*  If no results are found, output will contain an error message.
+						*/
 						if ((val.name.search(myExp) != -1) || (val.city.search(myExp) != -1) || (val.state.search(myExp)!= -1) || (val.zip.search(myExp) != -1)) {
 						noResult = false;
 						output += '<li class="clearfix">';

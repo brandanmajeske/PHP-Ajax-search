@@ -2,7 +2,7 @@
 
 <div class="live_search">
 <div id="searcharea">
-<label for="search"><h2>Search</h2></label>
+<label for="search"><h2>Location Search</h2></label>
 <input class="span12" type="search" name="search" id="search" placeholder="Search by City, State or Zip" />
 <div id="update"></div>
 </div> <!-- end search -->
