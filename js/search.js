@@ -25,17 +25,19 @@ $(document).ready(function(){
 					$('#update').empty().append('<img src=\"img/ajax-loader.gif\" />');
 				},
 				success: function (data){
-
 						$('#update').empty();
 						var output = '<ul class="searchresults">';
 						$.each(data, function(key, val){
 
+						var phoneNum = val.phone_number;
+						var phone = "("+phoneNum.slice(0,3)+") "+phoneNum.slice(3,6)+"-"+phoneNum.slice(6);
+						
 						if ((val.name.search(myExp) != -1) || (val.city.search(myExp) != -1) || (val.state.search(myExp)!= -1) || (val.zip.search(myExp) != -1)) {
 						noResult = false;
 						output += '<li class="clearfix">';
 						output += '<div>';
 						output += '<h3>'+val.name+'</h3>';
-						output += '<h5>'+val.street_address+'<br />'+val.city+', '+val.state+' '+val.zip+'<br />'+val.phone_number+'</h5>';
+						output += '<h5>'+val.street_address+'<br />'+val.city+', '+val.state+' '+val.zip+'<br />'+phone+'</h5>';
 						output += '</div>';
 						output += '</li>';
 						}
