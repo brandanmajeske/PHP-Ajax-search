@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `locations` (
   `number` int(4) DEFAULT NULL,
   `cid` int(6) DEFAULT NULL,
-  `name` varchar(41) DEFAULT NULL,
-  `street_address` varchar(52) DEFAULT NULL,
-  `city` varchar(26) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `street_address` varchar(255) DEFAULT NULL,
+  `city` varchar(55) DEFAULT NULL,
   `state` varchar(5) DEFAULT NULL,
   `zip` varchar(10) DEFAULT NULL,
   `phone_number` bigint(10) DEFAULT NULL
